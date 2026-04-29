@@ -17,16 +17,14 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install pyinstaller
+        run: pip install -r requirements.txt pyinstaller
 
-      - name: Build EXE
-        run: pyinstaller --onefile --noconsole main.py
+      - name: Build EXE (console version for debug)
+        run: pyinstaller --onefile --console main.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: QMT-AutoLogin-EXE
+          name: QMT-AutoLogin-DEBUG
           path: dist/main.exe
-          retention-days: 30
+          retention-days: 1
