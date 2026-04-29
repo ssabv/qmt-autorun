@@ -1,4 +1,7 @@
 schedule>=1.2.0
 pyautogui>=0.9.54
-psutil>=5.9.0
 pywin32>=300
+pywinauto>=0.6.8
+pytesseract>=0.3.10
+opencv-python>=4.5.0
+python-dotenv>=1.0.0
